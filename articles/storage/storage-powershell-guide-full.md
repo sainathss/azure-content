@@ -218,7 +218,7 @@ Use one of the following three ways to create a storage context:
 
     	$StorageAccountName = "yourstorageaccount"
     	$StorageAccountKey = Get-AzureStorageKey -StorageAccountName $StorageAccountName
-    	$Ctx = New-AzureStorageContext $StorageAccountName -StorageAccountKey $StorageAccountKey.Primary
+    	$Ctx = New-AzureStorageContext $StorageAccountName -StorageAccountKey $StorageAccountKey.Key1
 
 
 - Generate a shared access signature token for an Azure storage container and use it to create a storage context:

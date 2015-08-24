@@ -217,7 +217,8 @@ Use one of the following three ways to create a storage context:
 - Run the [Get-AzureStorageKey](http://msdn.microsoft.com/library/azure/dn495235.aspx) cmdlet to find out the primary storage access key for your Azure storage account. Next, call the [New-AzureStorageContext](http://msdn.microsoft.com/library/azure/dn806380.aspx) cmdlet to create a storage context:
 
     	$StorageAccountName = "yourstorageaccount"
-    	$StorageAccountKey = Get-AzureStorageKey -StorageAccountName $StorageAccountName
+    	$ResourceGroupName = "yourresourcegroupname"
+    	$StorageAccountKey = Get-AzureStorageKey -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName
     	$Ctx = New-AzureStorageContext $StorageAccountName -StorageAccountKey $StorageAccountKey.Primary
 
 
